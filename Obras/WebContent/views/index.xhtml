@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/WEB-INF/templates/_template.xhtml">
+	<ui:define name="corpo">
+		
+		<h:form id="form-obra">
+		
+			
+			<h:panelGrid styleClass="panel-grid01-obra" columns="2" rules="groups" columnClasses="pr1,pr9" align="center">
+			
+				<p:outputLabel value="Cliente Final:" for="cliente-final"/>
+				<p:inputText id="cliente-final"/>
+				
+				<p:outputLabel value="Descrição:" for="descricao"/>
+				<p:inputText id="descricao"/>
+				
+				<p:outputLabel value="Sub Obra:" for="sub-obra"/>
+				<p:inputText id="sub-obra"/>
+				
+				<p:outputLabel value="Clidade:" for="cidade"/>
+				<p:inputText id="cidade"/>
+				
+				<p:outputLabel value="Estado" for="estado"/>
+				<h:selectOneMenu styleClass="select-form" id="estado">
+					<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+					<f:selectItem itemValue="sp" itemLabel="SP"/>
+					<f:selectItem itemValue="rj" itemLabel="RJ"/>
+					<f:selectItem itemValue="mg" itemLabel="MG"/>
+				</h:selectOneMenu>
+				
+				<p:outputLabel value="Investimento:" for="investimento"/>
+				<p:inputText id="investimento"/>
+				
+				<p:outputLabel value="Status:" for="status"/>
+				<h:selectOneMenu styleClass="select-form" id="status">
+					<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+					<f:selectItem itemValue="1" itemLabel="Ativo"/>
+					<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
+					<f:selectItem itemValue="3" itemLabel="Encerrada"/>
+				</h:selectOneMenu>
+				
+				<p:outputLabel value="Observações:" for="observacoes"/>
+				<p:inputTextarea id="observacoes"/>
+				
+			</h:panelGrid>
+		
+			
+		<div  id="conteudo2">
+			<p:dataTable emptyMessage="Nenhuma obra adicionada!">
+				<p:column headerText="Cliente Final">
+				
+				</p:column>
+				
+				<p:column headerText="Descrição">
+				
+				</p:column>
+				
+				<p:column headerText="Sub Obra">
+				
+				</p:column>
+				
+				<p:column headerText="Cidade">
+				
+				</p:column>
+				
+				<p:column headerText="Estado">
+				
+				</p:column>
+				
+				<p:column headerText="Investimento">
+				
+				</p:column>
+				
+				<p:column headerText="Status">
+				
+				</p:column>
+				
+				<p:column headerText="Observações">
+				
+				</p:column>
+			</p:dataTable>
+
+		</div>
+		
+		<div class="botao">
+			<p:commandButton value="Salvar"/>
+			<p:commandButton value="Remover"/>
+			<p:commandButton value="Cancelar"/>
+		</div>
+		
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
