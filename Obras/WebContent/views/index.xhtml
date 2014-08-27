@@ -10,50 +10,101 @@
 <ui:composition template="/WEB-INF/templates/_template.xhtml">
 	<ui:define name="corpo">
 		
-		<h:form id="form-obra">
+		<div class="btn-obra">
+			<p:commandButton value="Nova Obra" type="button" onclick="PF('nova_obra').show();" />
+		</div>
 		
-			
-			<h:panelGrid styleClass="panel-grid01-obra" columns="2" rules="groups" columnClasses="pr1,pr9" align="center">
-			
-				<p:outputLabel value="Cliente Final:" for="cliente-final"/>
-				<p:inputText id="cliente-final"/>
-				
-				<p:outputLabel value="Descrição:" for="descricao"/>
-				<p:inputText id="descricao"/>
-				
-				<p:outputLabel value="Sub Obra:" for="sub-obra"/>
-				<p:inputText id="sub-obra"/>
-				
-				<p:outputLabel value="Clidade:" for="cidade"/>
-				<p:inputText id="cidade"/>
-				
-				<p:outputLabel value="Estado" for="estado"/>
-				<h:selectOneMenu styleClass="select-form" id="estado">
-					<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
-					<f:selectItem itemValue="sp" itemLabel="SP"/>
-					<f:selectItem itemValue="rj" itemLabel="RJ"/>
-					<f:selectItem itemValue="mg" itemLabel="MG"/>
-				</h:selectOneMenu>
-				
-				<p:outputLabel value="Investimento:" for="investimento"/>
-				<p:inputText id="investimento"/>
-				
-				<p:outputLabel value="Status:" for="status"/>
-				<h:selectOneMenu styleClass="select-form" id="status">
-					<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
-					<f:selectItem itemValue="1" itemLabel="Ativo"/>
-					<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
-					<f:selectItem itemValue="3" itemLabel="Encerrada"/>
-				</h:selectOneMenu>
-				
-				<p:outputLabel value="Observações:" for="observacoes"/>
-				<p:inputTextarea id="observacoes"/>
-				
-			</h:panelGrid>
+		<p:dialog dynamic="true" header="Cadastro de Obra" widgetVar="nova_obra" resizable="false" modal="true" width="800" height="700">
 		
+			<h:form id="form-obra">
+				<h:panelGrid styleClass="panel-obra" columns="2" rules="groups" columnClasses="pr2,pr8" align="center">
+				
+					<p:outputLabel value="Cliente Final:" for="cliente-final"/>
+					<p:inputText id="cliente-final"/>
+					
+					<p:outputLabel value="Descrição:" for="descricao"/>
+					<p:inputText id="descricao"/>
+					
+					<p:outputLabel value="Sub Obra:" for="sub-obra"/>
+					<p:inputText id="sub-obra"/>
+					
+					<p:outputLabel value="Clidade:" for="cidade"/>
+					<p:inputText id="cidade"/>
+					
+					<p:outputLabel value="Estado" for="estado"/>
+					<h:selectOneMenu styleClass="select-form" id="estado">
+						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+						<f:selectItem itemValue="sp" itemLabel="SP"/>
+						<f:selectItem itemValue="rj" itemLabel="RJ"/>
+						<f:selectItem itemValue="mg" itemLabel="MG"/>
+					</h:selectOneMenu>
+					
+					<p:outputLabel value="Investimento:" for="investimento"/>
+					<p:inputText id="investimento"/>
+					
+					<p:outputLabel value="Status:" for="status"/>
+					<h:selectOneMenu styleClass="select-form" id="status">
+						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+						<f:selectItem itemValue="1" itemLabel="Ativo"/>
+						<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
+						<f:selectItem itemValue="3" itemLabel="Encerrada"/>
+					</h:selectOneMenu>
+					
+					<p:outputLabel value="Observações:" for="observacoes"/>
+					<p:inputTextarea id="observacoes"/>
+					
+					<p:outputLabel value="Anexos:"/>
+					<p:fileUpload style="margin:5px;" label="Adicionar"/>
+					
+				</h:panelGrid>
+				
+				<h:panelGrid styleClass="panel-obra" columns="5" rules="groups" columnClasses="pr2,pr1,pr5,pr1,pr1" align="center">
+					<p:outputLabel value="Engenharia"/>
+					<p:commandButton value="..."/>
+					<p:inputText disabled="true"/>
+					<p:commandButton value="Add"/>
+					<p:commandButton value="Novo" type="button" onclick="PF('nova_engenharia').show();" />
+				</h:panelGrid>
+				
+				<p:dataTable styleClass="tabela" style="margin:5px;" paginator="true" paginatorPosition="bottom" rows="5">
+				
+					<p:column headerText="Código">
+					
+					</p:column>
+					
+					<p:column headerText="Descrição">
+					
+					</p:column>
+					
+				</p:dataTable>
+				
+				<div class="botao">
+					<p:commandButton value="Salvar"/>
+					<p:commandButton value="Remover"/>
+					<p:commandButton value="Cancelar"/>
+				</div>
+					
+			</h:form>
 			
+		</p:dialog> 
+
 		<div  id="conteudo2">
-			<p:dataTable emptyMessage="Nenhuma obra adicionada!">
+		<h:form id="form-obra02">
+			<h:panelGrid columns="3" styleClass="panel-obra" rules="groups" columnClasses="pr45,pr45,pr1" align="center">
+				<p:inputText/>
+				<p:inputText/>
+				<p:commandButton value="Pesquisar"/>
+			</h:panelGrid>
+			
+			<p:dataTable emptyMessage="Nenhuma obra adicionada!" rowClasses="par, impar">
+				<p:column headerText="Código">
+				
+				</p:column>
+				
+				<p:column headerText="Atualização">
+				
+				</p:column>
+				
 				<p:column headerText="Cliente Final">
 				
 				</p:column>
@@ -86,16 +137,24 @@
 				
 				</p:column>
 			</p:dataTable>
-
-		</div>
-		
-		<div class="botao">
-			<p:commandButton value="Salvar"/>
-			<p:commandButton value="Remover"/>
-			<p:commandButton value="Cancelar"/>
-		</div>
-		
+	
 		</h:form>
+		</div>
+		
+		<p:dialog header="Nova Engenharia" widgetVar="nova_engenharia" modal="true" width="400" height="100">
+		    <h:form id="form-obra03">
+		    	<h:panelGrid styleClass="panel-obra" columns="2" rules="groups" columnClasses="pr2,pr8" align="center">
+		    		<p:outputLabel value="Descrição:" for="descricao"/>
+		    		<p:inputText id="descricao"/>
+		    	</h:panelGrid>
+		    	
+		    	<div class="botao">
+					<p:commandButton value="Salvar"/>
+					<p:commandButton value="Cancelar"/>
+				</div>
+		    </h:form>
+		</p:dialog>
+
 	</ui:define>
 </ui:composition>
 </html>

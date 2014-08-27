@@ -5,6 +5,7 @@
 	vertical-align:baseline;
 }
 
+/****************************Cabeçalho****************************/
 #logo {
 	position: relative;
 	width: 200px;
@@ -12,17 +13,6 @@
 	float: right;
 }
 
-.botao {
-	margin: 5px;
-	float: right;
-}
-
-body {
-	position: absolute;
-	background-color: #b8c1c8;
-	height: 100%;
-	width: 100%;
-}
 
 #header {
 	background: #0069aa;
@@ -35,13 +25,40 @@ body {
     -webkit-border-radius: 0 0 10px 10px;
 }
 
+.menu {
+	width: 80%;
+	float: left;
+}
+
+.menu-form button {
+	margin: 20px 10px 10px 10px;
+	color: #000;
+	font-weight: normal;
+}
+
+/****************************Botões****************************/
+.botao {
+	float: right;
+}
+
+.botao button {
+	margin: 10px 5px 5px 5px;
+}
+
+.btn-obra{
+	margin: 10px;
+}
+
+/****************************Conteúdo****************************/
+body {
+	position: absolute;
+	background-color: #b8c1c8;
+	height: 100%;
+	width: 100%;
+}
+
 #conteudo2 {
-	background-color: #e1e1e1;
-	border: 2px solid #f7f7f7;
 	padding: 10px;
-	border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
 }
 
 .cont-int {
@@ -49,36 +66,63 @@ body {
 	display: block;
 	height: 87%;
 	margin: 8px;
-	z-index: 11;
 	background-color: #e1e1e1;
 	border: 2px solid #f7f7f7;
 	border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
 }
-.menu {
-	width: 80%;
-	float: left;
-}
 
-.menu-form button {
-	margin: 10px 10px 10px 10px;
-	color: #000;
-	font-weight: normal;
-}
-
-.panel-grid01-obra, .panel-grid02-obra {
+.panel-obra {
 	width: 100%;
 	text-align: center;
 }
 
+/****************************Formulários****************************/
+#form-obra {
+	margin: 20px;
+}
 
+#form-obra input, textarea {
+	width: 100%;
+	margin: 5px;
+}
+
+#form-obra02 input {
+	margin: 10px;
+	width: 98%;
+}
+
+#form-obra03 input {
+	margin: 10px;
+	width: 90%;
+}
+
+#form-obra label {
+	color: #777777;
+	font-weight: bold;
+}
+
+.select-form{
+	width: 100% !important;
+	margin: 5px !important;
+	height: 24px !important;
+	border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+/****************************Porcentagem****************************/
 .pr1 {
 	width: 10%;
 }
 
 .pr2 {
 	width: 20%;
+}
+
+.pr5 {
+	width: 50%;
 }
 
 .pr8 {
@@ -89,26 +133,24 @@ body {
 	width: 90%;
 }
 
-#form-obra {
-	margin: 20px;
+.pr45 {
+	width: 45%;
 }
 
-#form-obra input, textarea {
-	width: 100%;
-	margin: 5px;
+/* tabela zebrada */
+
+.par {
+	background-color: #F0F9FF;
 }
 
-#form-obra label {
-	color: #777777;
-	font-size: 14px;
-	font-weight: bold;
+.impar {
+	background: none repeat scroll 0 0 #DDDDDD;
 }
 
-.select-form{
-	width: 100% !important;
-	margin: 5px !important;
-	height: 30px !important;
-	border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+/*############################################################################################################*/
+
+.ui-widget {  
+   font-size: 12px !important;
+  
 }
+ 
