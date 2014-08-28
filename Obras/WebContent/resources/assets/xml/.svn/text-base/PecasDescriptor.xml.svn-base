@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dtoFields>
-	<fields type="collection" collectionField="itensAtendimento" formatToShow="[0] - [1]" nameField="descricao">
-		<dtoField propertie="codigo"/>
-		<dtoField propertie="quantidade"/>
-	</fields>
-</dtoFields>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dtoFields>
-	<fields name="Preço lista" dtoField="precoDeLista" type="simple"/>
-	<fields name="Preço mínimo" dtoField="precoMinimo" type="simple"/>
-	<fields name="Preço negociado" dtoField="precoNegociado" type="simple"/>
-	<fields name="Quantidade" dtoField="quantidade" type="simple"/>
-	<fields name="Valor Total" dtoField="valorTotal" type="simple"/>
-	<fields name="Prazo de Entrega" dtoField="prazoDeEntrega" type="simple"/>
-</dtoFields>
