@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dtoFields>
+	<fields name="Nome" dtoField="clienteDTO.nome" type="nested" />
+	<fields name="Contato" dtoField="contatoDTO.nome" type="nested" />
+	<fields name="Obra" dtoField="obra.descricao" type="nested" />
+	<fields name="Condição de Pagamento" type="multiple"
+		formatToShow="[0] - [1] %">
+		<dtoField propertie="condicaoDePagamentoDTO.descricao" />
+		<dtoField propertie="condicaoDePagamentoDTO.custoFinanceiro" />
+	</fields>
+	<fields name="Finalidade" dtoField="finalidade.descricao" type="nested" />
+	<fields name="Frete" dtoField="freteDTO.descricao" type="nested" />
+	<fields name="Moeda" dtoField="moedaDTO.descricao" type="nested" />
+	<fields name="Validade" dtoField="validade" type="simple" />
+	<fields name="Follow-UP" dtoField="followUp" type="simple" />
+	<fields name="Transportadora" dtoField="transportadoraDTO.nome"
+		type="nested" />
+	<fields name="Ordem de Serviço" type="multiple" formatToShow="[0] - [1]">
+		<dtoField propertie="linhaOS" />
+		<dtoField propertie="capaOS" />
+	</fields>
+	<fields name="Fechamento" dtoField="porcentagemFechamento" type="simple" />
+</dtoFields>

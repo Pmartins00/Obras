@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	 ADOBE SYSTEMS INCORPORATED
+	 Copyright 2008 Adobe Systems Incorporated
+	 All Rights Reserved.
+
+	 NOTICE: Adobe permits you to use, modify, and distribute this file
+	 in accordance with the terms of the license agreement accompanying it.
+
+-->
+<!--- The default skin class for Spark TextInput component.
+
+	 @see spark.components.TextInput
+
+	 @langversion 3.0
+	 @playerversion Flash 10
+	 @playerversion AIR 1.5
+	 @productversion Flex 4
+-->
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+			 xmlns:s="library://ns.adobe.com/flex/spark"
+			 xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
+			 alpha.disabled="0.5"
+			 blendMode="normal">
+
+	<fx:Metadata>[HostComponent("spark.components.TextInput")]</fx:Metadata>
+
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="disabled"/>
+	</s:states>
+	<s:BitmapImage smooth="true"
+				   source="@Embed('../images/textInput/Image_0.png')"
+				   x="2"
+				   y="2"/>
+
+	<!--- @copy spark.components.supportClasses.SkinnableTextBase#textDisplay -->
+	<!--<s:RichEditableText id="textDisplay"
+		 verticalAlign="middle"
+		 widthInChars="10"
+		 left="1" right="1" top="1" bottom="1" />-->
+	<s:RichEditableText color="#666666"
+						verticalCenter="0"
+						horizontalCenter="0"
+						fontSize="12"
+						heightInLines="1"
+						id="textDisplay"
+						tabStops="S0"
+						width="28"
+						x="0"
+						textAlign="center"
+						y="1"
+						fontWeight="bold"/>
+
+</s:SparkSkin>

@@ -31,9 +31,31 @@
 }
 
 .menu-form button {
-	margin: 20px 10px 10px 10px;
-	color: #000;
+	background-color: transparent;
+	margin: 10px 10px 10px 10px;
+	color: #FFF;
 	font-weight: normal;
+	height: 44px;
+	width: 120px;
+	background-image: url("#{facesContext.externalContext.requestContextPath}/resources/imagens/images/dropdown/btnBlueMenuUp.png");
+	background-repeat: no-repeat;
+}
+
+.menu-form div {
+	margin: 10px 10px 10px 10px;
+	color: #FFF;
+	text-align:center;
+	width: 120px;
+	height: 44px;
+	top: 50%;
+	left: 50%;
+	background-image: url("#{facesContext.externalContext.requestContextPath}/resources/imagens/images/dropdown/btnBlueMenuUp.png");
+	background-repeat: no-repeat;
+}
+
+.menu-form button:HOVER {
+	background-image: url("#{facesContext.externalContext.requestContextPath}/resources/imagens/images/dropdown/btnBlueMenuOver.png");
+	background-repeat: no-repeat;
 }
 
 /****************************Botões****************************/
@@ -110,6 +132,16 @@ body {
 	border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
+}
+
+.tabela th {
+	background-color: #222325;
+	color: #FFF;
+	font-weight: normal;
+	background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0,0,0,0)), to(rgba(0,0,0,0)));
+	background-image: -webkit-linear-gradient(left, color-stop(rgba(0,0,0,0) 0), color-stop(rgba(0,0,0,0) 100%));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0) 0, rgba(0,0,0,0) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,0) 100%);
 }
 
 /****************************Porcentagem****************************/
