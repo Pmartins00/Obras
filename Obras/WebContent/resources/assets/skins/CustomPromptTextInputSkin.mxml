@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkSkin
+		xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		minWidth="100" minHeight="22"
+		alpha.disabled="0.5"
+		blendMode="normal">
+
+	<fx:Metadata>
+		[HostComponent("br.com.cestari.components.controls.PromptingTextInput")]
+	</fx:Metadata> 
+
+	<!-- states -->
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="prompting"/>
+		<s:State name="disabled"/>
+		<fx:Script>
+			<![CDATA[
+				import br.com.cestari.assets.Assets;
+			]]>
+		</fx:Script>
+	</s:states>
+
+	<s:BitmapImage smooth="true" source="{Assets.FUNDO_TEXT_INPUT}" width="100%" height="100%"/>
+
+	<!-- text -->
+	<s:RichEditableText id="textDisplay" left="4" right="24" top="1" bottom="0"
+			color="#666666"
+			verticalAlign="middle" />
+
+	<!-- prompt -->
+	<s:Label id="promptDisplay" left="4" right="4" top="1" bottom="0" includeIn="prompting"
+			color="#aaaaaa" fontStyle="italic"
+			maxDisplayedLines="1"
+			verticalAlign="middle" />
+	
+</s:SparkSkin>

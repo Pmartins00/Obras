@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dtoFields>
+	<!-- Aplicação -->
+	<fields name="Aplicação" dtoField="aplicacao" type="simple" />
+	<fields name="Regime Operação" dtoField="regimeOperacao" type="simple" />
+	<fields name="Num Partidas por Hora" dtoField="numPartidasHora"
+		type="simple" />
+	<fields name="Tipo Partida" dtoField="tipoDePartida.descricao"
+		type="nested" />
+	<fields name="Rampa de Aceleração" dtoField="rampaAceleracao"
+		type="simple" />
+	<fields name="Rampa de Desaceleração" dtoField="rampaDesaceleracao"
+		type="simple" />
+	<fields name="Tipo de Carga" dtoField="tipoDeCarga.descricao"
+		type="nested" />
+	<fields name="Observação" dtoField="observacao" type="simple" />
+	<fields name="Duração da Operação" dtoField="duracaoOperacao"
+		type="simple" />
+
+	<!-- Ambiente -->
+	<fields name="Ambiente" dtoField="tipoDeAmbiente.descricao"
+		type="nested" />
+	<fields name="Temperatura Mínima" dtoField="tempAmbienteMinima"
+		type="simple" />
+	<fields name="Temperatura Média" dtoField="tempAmbienteMedia"
+		type="simple" />
+	<fields name="Temperatura Máxima" dtoField="tempAmbienteMaxima"
+		type="simple" />
+	<fields name="Altitude" dtoField="altitude" type="simple" />
+	<fields name="Pó em Suspensão" dtoField="poSuspensao" type="simple" />
+	<fields name="Agente Corrosivo" dtoField="agenteCorrosivo" type="simple" />
+	<fields name="Velocidade do Fluxo de Ar" dtoField="velocidadeFluxoAr"
+		type="simple" />
+	<fields name="Temperatura do Óleo" dtoField="temperaturaOleo"
+		type="simple" />
+
+	<!-- Dados do Produto -->
+	<fields name="Potencia Instalada" dtoField="potenciaInstalada"
+		type="simple" />
+	<fields name="Tipo de Potência" dtoField="tiposPotenciaMoto.descricao"
+		type="nested" />
+	<fields name="Potência Consumida" dtoField="potenciaConsumida"
+		type="simple" />
+	<fields name="Rotação do Motor" dtoField="rotacaoMotor" type="simple" />
+	<fields name="Rotação de entrada do redutor" dtoField="rotacaoEntradaRedutor"
+		type="simple" />
+	<fields name="Sentido de rotação de entrada" dtoField="sentidoRotacaoEntrada.descricao"
+		type="nested" />
+	<fields name="Redução" dtoField="reducao" type="simple" />
+	<fields name="Rotação de saída do redutor" dtoField="rotacaoSaidaRedutor"
+		type="simple" />
+	<fields name="Sentido de rotação de saída" dtoField="sentidoRotacaoSaida.descricao"
+		type="nested" />
+	<fields name="Orientação de eixos" dtoField="orientacaoEixo"
+		type="simple" />
+	<fields name="Forma construtiva" dtoField="formaConstrutiva"
+		type="simple" />
+	<fields name="Posição de trabalho" dtoField="posicaoTrabalho"
+		type="simple" />
+	<fields name="Tipo de Eixo de Saída" dtoField="tipoEixoSaida.descricao"
+		type="nested" />
+	<fields name="Tipo de fixação" dtoField="tipoFixacao.descricao"
+		type="nested" />
+	<fields name="Transmissão redutor/máquina" dtoField="elementoSaida.descricao"
+		type="nested" />
+	<fields name="Transmissão motor/redutor" dtoField="elementoEntrada.descricao"
+		type="nested" />
+
+	<fields name="Descrição do Elemento de Entrada" dtoField="descricaoElementoEntrada"
+		type="simple" />
+	<fields name="Descrição Elemento de Saída" dtoField="descricaoElementoSaida"
+		type="simple" />
+	<fields name="Rotação de Saída" dtoField="rotacaoSaida" type="simple" />
+	<fields name="Torque" dtoField="torque" type="simple" />
+	<fields name="Fator de Serviço Mecânico" dtoField="fatorServicoMecanico"
+		type="simple" />
+	<fields name="Fator de Serviço Térmico" dtoField="fatorServicoTermico"
+		type="simple" />
+</dtoFields>

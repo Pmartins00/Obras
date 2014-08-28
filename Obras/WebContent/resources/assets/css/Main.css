@@ -1,0 +1,228 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace ns "library://ns.tink.ws/flex/spark";
+@namespace main "br.com.cestari.view.main.*";
+@namespace sf "library://www.dclick.com.br/servicefeedback";
+@namespace controls "org.flexunit.flexui.controls.*";
+@namespace fields "br.com.cestari.view.components.fields.*";
+@namespace controls1 "br.com.cestari.components.controls.*";
+
+/*===========Spark FONT===========*/
+@font-face
+{
+	src: url("../fonts/arial.ttf");
+	font-family: SparkEmbeddedFont;
+	font-weight: normal;
+	embed-as-cff: true;
+}
+
+@font-face
+{
+	src: url("../fonts/arialbd.ttf");
+	font-family: SparkEmbeddedFont;
+	font-weight: bold;
+	embed-as-cff: true;
+}
+
+/*===========MX FONT===========*/
+
+@font-face
+{
+	src: url("../fonts/arial.ttf");
+	font-family: MXEmbeddedFont;
+	font-weight: normal;
+	embed-as-cff: false;
+}
+
+@font-face
+{
+	src: url("../fonts/arialbd.ttf");
+	font-family: MXEmbeddedFont;
+	font-weight: bold;
+	embed-as-cff: false;
+}
+
+s|Application {
+	/*font-family: Arial;*/
+	font-family: SparkEmbeddedFont;
+	background-color: #B8C1C8;
+}
+
+mx|global
+{
+	font-family: MXEmbeddedFont;
+}
+
+/*mx|LegendItem
+{
+	font-family: MXEmbeddedFont;
+	font-size: 12;
+	textFieldClass: ClassReference("mx.core.UITextField");
+}*/
+
+global
+{
+	content-background-alpha: 1.0;
+	color: #545454;
+	modal-transparency: 0.8;
+	modal-transparency-color: #2D587A;
+	modal-transparency-duration: 600;
+}
+
+ns|Form {
+	skin-class: ClassReference("br.com.cestari.assets.skins.CustomSkinForm");
+}
+
+ns|FormItem {
+	skin-class: ClassReference("br.com.cestari.assets.skins.CustomFormItemSkin");
+}
+
+s|RadioButton {
+	skin-class: ClassReference("br.com.cestari.assets.skins.BlueRadioButtonSkin");
+}
+
+s|Button {
+	skin-class: ClassReference("br.com.cestari.assets.skins.ButtonSilverSkin");
+}
+
+main|MenuHeader {
+	skin-class: ClassReference("br.com.cestari.assets.skins.TopMenuSkin");
+}
+
+controls|PromptingTextInput, controls1|PromptingTextInput
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.PromptingTextInputSkin");
+}
+
+fields|FieldPromptTextInput
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.CustomPromptTextInputSkin");
+}
+
+controls|PromptingTextArea
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.PromptingTextAreaSkin"); 
+}
+
+fields|FieldPromptTextArea
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.PromptTextAreaSkin");
+}
+
+s|DropDownList
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.dropdown.RequiredDropDownListSkin");
+}
+
+mx|DateField
+{
+	skin: Embed(source="../images/icons/calendar_icon.png");
+	up-skin: ClassReference(null);
+	over-skin: ClassReference(null);
+	down-skin: ClassReference(null);
+	text-input-class: ClassReference("mx.controls.MXFTETextInput");
+	text-input-style-name: inputStyle; 
+}
+
+.inputStyle
+{
+	skin-class: ClassReference("br.com.cestari.assets.skins.TextInputCustomSkin");
+}
+
+.headerStyle
+{
+	skin: ClassReference("br.com.cestari.assets.skins.AcordionHeaderSkin");
+	background-color: #F8F8F8;
+}
+
+.bigFont
+{
+	font-size: 14px;
+	color: #545454;
+}
+
+
+ns|Form.bigFont
+{
+	skin: ClassReference("br.com.cestari.assets.skins.ComerciaFormItemSkin");
+}
+
+mx|FormItemLabel
+{
+	font-weight: bold;
+	color: #666666;
+}
+
+mx|DataGrid {
+	alternatingItemColors: #e6e6e6, #dddddd;
+	horizontalGridLines: true;
+	verticalGridLines: true;
+	rollOverColor: #7295b1;
+	selectionColor: #7295b1;
+	text-selected-color: #ffffff;
+	text-roll-over-color:	#ffffff;
+	font-weight: bold;
+	headerStyleName: "mydataGridHeaderStyle";
+	header-background-skin: ClassReference("br.com.cestari.assets.skins.CustomDataGridHeaderBackgroundSkin");
+	sort-arrow-skin: Embed(source='../images/icons/seta_down.png');
+}
+
+mx|AdvancedDataGrid {
+	alternatingItemColors: #e6e6e6, #dddddd;
+	horizontalGridLines: true;
+	verticalGridLines: true;
+	rollOverColor: #7295b1;
+	selectionColor: #7295b1;
+	text-selected-color: #ffffff;
+	text-roll-over-color:	#ffffff;
+	font-weight: bold;	
+	header-background-skin: ClassReference("br.com.cestari.assets.skins.CustomAdvancedDataGridHeaderBackgroundSkin");
+	sort-arrow-skin: Embed(source='../images/icons/seta_down.png');
+}
+
+.mydataGridHeaderStyle {
+	color: #ffffff;
+	fontWeight: bold;
+}
+
+mx|AdvancedDataGridHeaderRenderer
+{	color: #ffffff;
+	fontWeight: bold;
+}
+
+.weblink
+{
+	color:blue;
+	text-decoration:underline;
+}
+
+.resumo {
+	color: #828282;
+	font-size: 10;
+	text-align: center;
+}
+
+.textCenter
+{
+	text-align:center;
+}
+
+.textBold
+{
+	font-weight: bold;
+}
+
+mx|ColumnSeries
+{
+	color: #FFFFFF;
+}
+
+mx|ColumnChart {
+	horizontalAxisStyleName:myAxisStyles;
+	verticalAxisStyleName:myAxisStyles;
+}
+
+.myAxisStyles {
+	tickPlacement:none;
+}

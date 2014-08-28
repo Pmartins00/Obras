@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dtoFields>
+	<fields name="Código" dtoField="item" type="simple"/>
+	<fields name="Variante" dtoField="variante" type="simple"/>
+	<fields name="Especialidade" dtoField="especialidade" type="simple"/>
+	<fields name="Família" type="multiple" formatToShow="[0] - [1]">
+		<dtoField propertie="familiaDTO.id"/>
+		<dtoField propertie="familiaDTO.descricao"/>
+	</fields>
+	<fields type="collection" collectionField="caracteristicas" formatToShow="[0] - [1]" nameField="description">
+		<dtoField propertie="code"/>
+		<dtoField propertie="codeDescription"/>
+	</fields>
+</dtoFields>
