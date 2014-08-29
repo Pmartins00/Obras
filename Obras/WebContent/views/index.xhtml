@@ -28,10 +28,22 @@
 					<p:outputLabel value="Sub Obra:" for="sub-obra"/>
 					<p:inputText id="sub-obra"/>
 					
-					<p:outputLabel value="Clidade:" for="cidade"/>
+					<p:outputLabel value="Cidade:" for="cidade"/>
 					<p:inputText id="cidade"/>
 					
-					<p:outputLabel value="Estado" for="estado"/>
+					<p:outputLabel value="Investimento:" for="investimento"/>
+					<p:inputText id="investimento"/>
+					
+					<p:outputLabel value="Observações:" for="observacoes"/>
+					<p:inputTextarea id="observacoes"/>
+					
+					<p:outputLabel value="Anexos:"/>
+					<p:fileUpload style="margin:5px;" label="Adicionar"/>
+				
+				</h:panelGrid>
+				
+				<h:panelGrid styleClass="panel-obra" columns="2" rules="groups" columnClasses="pr2,pr8" align="center">
+					<p:outputLabel value="Estado:" for="estado"/>
 					<h:selectOneMenu styleClass="select-form" id="estado">
 						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
 						<f:selectItem itemValue="sp" itemLabel="SP"/>
@@ -39,23 +51,16 @@
 						<f:selectItem itemValue="mg" itemLabel="MG"/>
 					</h:selectOneMenu>
 					
-					<p:outputLabel value="Investimento:" for="investimento"/>
-					<p:inputText id="investimento"/>
 					
-					<p:outputLabel value="Status:" for="status"/>
+					
+					<p:outputLabel style="margin-top:-5px;" value="Status:" for="status"/>
 					<h:selectOneMenu styleClass="select-form" id="status">
 						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
 						<f:selectItem itemValue="1" itemLabel="Ativo"/>
 						<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
 						<f:selectItem itemValue="3" itemLabel="Encerrada"/>
 					</h:selectOneMenu>
-					
-					<p:outputLabel value="Observações:" for="observacoes"/>
-					<p:inputTextarea id="observacoes"/>
-					
-					<p:outputLabel value="Anexos:"/>
-					<p:fileUpload style="margin:5px;" label="Adicionar"/>
-					
+
 				</h:panelGrid>
 				
 				<h:panelGrid styleClass="panel-obra" columns="5" rules="groups" columnClasses="pr2,pr1,pr5,pr1,pr1" align="center">
