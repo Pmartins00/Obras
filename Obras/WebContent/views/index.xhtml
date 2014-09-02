@@ -38,30 +38,35 @@
 					<p:inputTextarea id="observacoes"/>
 					
 					<p:outputLabel value="Anexos:"/>
-					<p:fileUpload style="margin:5px;" label="Adicionar"/>
+					<p:fileUpload  mode="simple" style="margin:5px;" label="Adicionar"/>
 				
 				</h:panelGrid>
 				
-				<h:panelGrid styleClass="panel-obra" columns="2" rules="groups" columnClasses="pr2,pr8" align="center">
+				<div class="cm1">
+					<div class="cm2">
 					<p:outputLabel value="Estado:" for="estado"/>
-					<h:selectOneMenu styleClass="select-form" id="estado">
-						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
-						<f:selectItem itemValue="sp" itemLabel="SP"/>
-						<f:selectItem itemValue="rj" itemLabel="RJ"/>
-						<f:selectItem itemValue="mg" itemLabel="MG"/>
-					</h:selectOneMenu>
+					</div>
+					<div class="box_select">
+						<h:selectOneMenu styleClass="" id="estado">
+							<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+							<f:selectItem itemValue="sp" itemLabel="SP"/>
+							<f:selectItem itemValue="rj" itemLabel="RJ"/>
+							<f:selectItem itemValue="mg" itemLabel="MG"/>
+						</h:selectOneMenu>
+					</div>
 					
-					
-					
+					<div class="cm2">
 					<p:outputLabel style="margin-top:-5px;" value="Status:" for="status"/>
-					<h:selectOneMenu styleClass="select-form" id="status">
-						<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
-						<f:selectItem itemValue="1" itemLabel="Ativo"/>
-						<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
-						<f:selectItem itemValue="3" itemLabel="Encerrada"/>
-					</h:selectOneMenu>
-
-				</h:panelGrid>
+					</div>
+					<div class="box_select">
+						<h:selectOneMenu styleClass="" id="status">
+							<f:selectItem itemValue="0" itemLabel="Escolha Algum"/>
+							<f:selectItem itemValue="1" itemLabel="Ativo"/>
+							<f:selectItem itemValue="2" itemLabel="Obra Paralisada"/>
+							<f:selectItem itemValue="3" itemLabel="Encerrada"/>
+						</h:selectOneMenu>
+					</div>
+				</div>
 				
 				<h:panelGrid styleClass="panel-obra" columns="5" rules="groups" columnClasses="pr2,pr1,pr5,pr1,pr1" align="center">
 					<p:outputLabel value="Engenharia"/>
